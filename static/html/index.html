@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Jokes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+        body {
+            font-family: 'Fredoka One', cursive;
+            background-color: #ffecd1;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/doodles.png');
+        }
+
+        #joke-container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff9db;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #joke {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        #next-joke-btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #next-joke-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="joke-container">
+        <div id="joke">Press the button to load a joke!</div>
+        <button id="next-joke-btn">Next Joke</button>
+    </div>
+
+    <script>
+        document.getElementById('next-joke-btn').addEventListener('click', fetchJoke);
+
+        function fetchJoke() {
+            fetch('https://official-joke-api.appspot.com/random_joke')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('joke').innerHTML = `${data.setup} <br><br> ${data.punchline}`;
+                })
+                .catch(error => {
+                    document.getElementById('joke').innerHTML = 'Failed to fetch a joke!';
+                });
+        }
+    </script>
+</body>
+</html>

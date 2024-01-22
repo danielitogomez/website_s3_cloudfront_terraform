@@ -1,0 +1,53 @@
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# Ignore any .terraform directories
+**/.terraform/
+
+# Ignore provider plugin binaries
+**/terraform-provider-*
+
+# Ignore .terraform.lock.hcl file (used by Terraform 0.14 and later)
+.terraform.lock.hcl
+
+# Ignore local .tfvars files that may contain sensitive information
+*.auto.tfvars
+*.auto.tfvars.json
+*.tfvars
+*.tfvars.json
+
+# Ignore override files as they are usually used to re-create resources
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore crash.log files
+crash.log
+
+# Ignore .terraform generated files
+.terraform/
+
+# Ignore .vscode settings
+.vscode/
+
+# Ignore .idea settings
+.idea/
+
+# Ignore .terraform.tfstate files
+*.tfstate
+
+# Ignore .terraform.tfstate.backup files
+*.tfstate.backup
+
+# Ignore .terraform.tfvars files
+*.tfvars
+
+# Ignore .terraform.rc files
+.terraform.rc
