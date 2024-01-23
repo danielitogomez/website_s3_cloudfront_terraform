@@ -54,6 +54,6 @@ Follow these steps to deploy and manage your website infrastructure:
 
 - Remember that AWS credentials should be handled securely to protect your AWS resources. Use IAM roles and policies to follow security best practices.
 
-- To learn more about the infrastructure and the website setup, refer to the [accompanying article](link-to-article) for detailed explanations.
+- To learn more about the infrastructure and the website setup, refer to the [accompanying article](https://www.alter-solutions.com/articles/website-amazon-s3-terraform) for detailed explanations.
 
 Happy website deployment with Terraform!
